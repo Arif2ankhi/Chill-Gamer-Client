@@ -1,0 +1,9 @@
+.carousel-item img {
+    width: 100%;
+    height: 420px;
+    /* object-fit: cover; Ensures consistent scaling */
+  }
+  
+  .carousel {
+    margin-top: 2rem; /* Adds spacing from navbar */
+  }
