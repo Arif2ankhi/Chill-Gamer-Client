@@ -1,32 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.png'
+import Logo from '../../assets/Logo.jpg'
 
 const Navbar = () => {
 
     const links = (
         <>
-          <li>
+          {/* <li>
             <NavLink className="text-xl text-black font-bold" to="/">
               Home
             </NavLink>
-          </li>
-          {/* <li>
-            <NavLink className="text-xl text-black font-bold ml-5" to="/brands">
-              Brands
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="text-xl text-black font-bold ml-5" to="/aboutDev">
-              About Dev
-            </NavLink>
           </li> */}
+          <div className='gap-5'>
+            <NavLink className="text-lg text-black font-bold p-2 " to='/'>Home</NavLink>
+            <NavLink className=" text-lg text-black font-bold md:ml-4" to='/allReviews'>All Reviews</NavLink>
+            <NavLink className=" text-lg text-black font-bold md:ml-4" to='/addReview'>Add Review</NavLink>
+            {/* <NavLink className=" text-lg text-black font-bold md:ml-4" to='/allReviews'>All Reviews</NavLink>
+            <NavLink className="text-lg text-black font-bold md:ml-4" to='/addReview'>Add Review</NavLink> */}
+            <NavLink className="text-lg text-black font-bold md:ml-4" to='/myReviews'>My Reviews</NavLink>
+            <NavLink className="text-lg text-black font-bold md:ml-4" to='/gameWatchList'>Watch List</NavLink>
+            
+          </div>
+          
           </>
           )
 
 
     return (
-        <div className="navbar bg-red-800 rounded-lg mt-2 mb-8 sticky top-0 z-50 ">
+        <div className="navbar bg-orange-500 rounded-lg mt-2 mb-8 sticky top-0 z-50 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,7 +55,7 @@ const Navbar = () => {
         </div>
         <img
           className="  w-[96px] h-[84px] text-2xl rounded-lg ml-4  animate__animated animate__flip animate__fast animate__animate__infinite"
-          src={logo}
+          src={Logo}
           alt=""
         />
       </div>
@@ -75,7 +76,7 @@ const Navbar = () => {
             <Link to="/login">Login</Link>
           </button>
         )} */}
-        <button>Login</button>
+        <button>Signin</button>
       </div>
     </div>
     );
