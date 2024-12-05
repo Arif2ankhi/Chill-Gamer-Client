@@ -19,6 +19,7 @@ import AddReview from './components/AddReview/AddReview.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import AddGame from './components/AddGame/AddGame.jsx';
 import GameCard from './components/GameCard/GameCard.jsx';
+import GameDetails from './components/GameDetails/GameDetails.jsx';
 
 
 
@@ -33,6 +34,15 @@ const router= createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/game')
       },
+      {
+        
+          path: "/games/:_id",
+          element: <GameDetails></GameDetails>,
+          // loader: ({ params }) => fetch(`http://localhost:5000/game/${params._id}`),
+          loader: () => fetch('http://localhost:5000/game')
+         
+      },
+      
       {
         path:"/allReviews",
         element: <AllReviews></AllReviews>
@@ -67,6 +77,7 @@ const router= createBrowserRouter([
         path: "/gameCard",
         element:<GameCard></GameCard>
       }
+      
 
     ]
   },
