@@ -18,6 +18,7 @@ import AllReviews from './components/AllReviews/AllReviews.jsx';
 import AddReview from './components/AddReview/AddReview.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import AddGame from './components/AddGame/AddGame.jsx';
+import GameCard from './components/GameCard/GameCard.jsx';
 
 
 
@@ -29,15 +30,16 @@ const router= createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/game')
       },
       {
-        Path:"/allReviews",
+        path:"/allReviews",
         element: <AllReviews></AllReviews>
 
       },
       {
-        Path:"/addReview",
+        path:"/addReview",
         element: <AddReview></AddReview>
 
       },
@@ -60,6 +62,10 @@ const router= createBrowserRouter([
       {
         path: "/addGame",
         element:<AddGame></AddGame>
+      },
+      {
+        path: "/gameCard",
+        element:<GameCard></GameCard>
       }
 
     ]

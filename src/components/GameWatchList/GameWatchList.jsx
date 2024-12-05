@@ -3,7 +3,7 @@ import React from 'react';
 const GameWatchList = () => {
     return (
         <div>
-            Game Watchlist
+            This is watcglist
         </div>
     );
 };
