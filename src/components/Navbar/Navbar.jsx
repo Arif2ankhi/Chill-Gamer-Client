@@ -1,33 +1,60 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../assets/Logo.jpg'
+import Logo from '../../assets/Logo.jpg';
 
 const Navbar = () => {
+  const links = (
+    <ul className="flex flex-col lg:flex-row lg:items-center lg:gap-5">
+      <li>
+        <NavLink
+          className="text-lg text-black font-bold p-2"
+          to="/"
+          activeClassName="text-orange-700"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="text-lg text-black font-bold p-2"
+          to="/allReviews"
+          activeClassName="text-orange-700"
+        >
+          All Reviews
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="text-lg text-black font-bold p-2"
+          to="/addReview"
+          activeClassName="text-orange-700"
+        >
+          Add Review
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="text-lg text-black font-bold p-2"
+          to="/myReviews"
+          activeClassName="text-orange-700"
+        >
+          My Reviews
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="text-lg text-black font-bold p-2"
+          to="/gameWatchList"
+          activeClassName="text-orange-700"
+        >
+          Watch List
+        </NavLink>
+      </li>
+    </ul>
+  );
 
-    const links = (
-        <>
-          {/* <li>
-            <NavLink className="text-xl text-black font-bold" to="/">
-              Home
-            </NavLink>
-          </li> */}
-          <div className='gap-5'>
-            <NavLink className="text-lg text-black font-bold p-2 " to='/'>Home</NavLink>
-            <NavLink className=" text-lg text-black font-bold md:ml-4" to='/allReviews'>All Reviews</NavLink>
-            <NavLink className=" text-lg text-black font-bold md:ml-4" to='/addReview'>Add Review</NavLink>
-            {/* <NavLink className=" text-lg text-black font-bold md:ml-4" to='/allReviews'>All Reviews</NavLink>
-            <NavLink className="text-lg text-black font-bold md:ml-4" to='/addReview'>Add Review</NavLink> */}
-            <NavLink className="text-lg text-black font-bold md:ml-4" to='/myReviews'>My Reviews</NavLink>
-            <NavLink className="text-lg text-black font-bold md:ml-4" to='/gameWatchList'>Watch List</NavLink>
-            
-          </div>
-          
-          </>
-          )
-
-
-    return (
-        <div className="navbar bg-orange-500 rounded-lg mt-2 mb-8 sticky top-0 z-50 ">
+  return (
+    <div className="navbar bg-orange-500 rounded-lg mt-2 mb-8 sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,32 +81,21 @@ const Navbar = () => {
           </ul>
         </div>
         <img
-          className="  w-[96px] h-[84px] text-2xl rounded-lg ml-4  animate__animated animate__flip animate__fast animate__animate__infinite"
+          className="w-[96px] h-[84px] text-2xl rounded-lg ml-4 animate__animated animate__flip animate__fast animate__infinite"
           src={Logo}
           alt=""
         />
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <div className="menu menu-horizontal px-1">{links}</div>
       </div>
       <div className="navbar-end">
-        {/* {user ? (
-          <>
-            <span>{user.email}</span>
-            <a onClick={handleSignOut} className="btn btn-secondary">
-              Sign Out
-            </a>
-          </>
-        ) : (
-          <button className=" btn btn-primary">
-            {" "}
-            <Link to="/login">Login</Link>
-          </button>
-        )} */}
-        <button>Signin</button>
+        <button className="btn btn-primary font-bold">Signin</button>
       </div>
     </div>
-    );
+  );
 };
 
 export default Navbar;
+
+

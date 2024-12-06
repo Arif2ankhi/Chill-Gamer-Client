@@ -11,9 +11,9 @@ import {
 import Home from './components/Home/Home.jsx';
 import MyReviews from './components/MyReviews/MyReviews.jsx';
 import GameWatchList from './components/GameWatchList/GameWatchList';
-import Register from './components/Register/Register.jsx';
+// import Register from './components/Register/Register.jsx';
 import Layout from './components/Layout/Layout.jsx';
-import Signin from './components/Signin/Signin.jsx';
+// import Signin from './components/Signin/Signin.jsx';
 import AllReviews from './components/AllReviews/AllReviews.jsx';
 import AddReview from './components/AddReview/AddReview.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
@@ -63,11 +63,11 @@ const router= createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Signin></Signin>
+        // element: <Signin></Signin>
       },
       {
         path: "/register",
-        element:<Register></Register>
+        // element:<Register></Register>
       },
       {
         path: "/addGame",
