@@ -1,8 +1,22 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/Logo.jpg';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+
 
 const Navbar = () => {
+
+  const { user, signOutUser } = useContext(AuthContext);
+  // console.log(user);
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        console.log("user sign out successfully");
+      })
+      .catch((error) => console.log("ERROR", error.message));
+  };
+
+
   const links = (
     <ul className="flex flex-col lg:flex-row lg:items-center lg:gap-5">
       <li>
@@ -90,7 +104,59 @@ const Navbar = () => {
         <div className="menu menu-horizontal px-1">{links}</div>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-primary font-bold">Signin</button>
+        {/* CHANGED PART START */}
+        {user ? (
+  <>
+    <div className="flex items-center gap-2">
+      {user.photoURL ? (
+        <img
+          src={user.photoURL}
+          alt="User Profile"
+          className="w-10 h-10 rounded-full"
+        />
+      ) : (
+        <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">
+          {user.displayName?.charAt(0).toUpperCase() || "U"}
+        </div>
+      )}
+      <span className="text-white font-bold">{user.email}</span>
+    </div>
+    <button onClick={handleSignOut} className="btn btn-secondary ml-2">
+      Sign Out
+    </button>
+  </>
+) : (
+  <button className="btn btn-primary">
+    <Link to="/login">Login</Link>
+  </button>
+)}
+
+
+
+
+        {/* CHANGED PART END */}
+        {/* PORER COMMENT  */}
+      {/* {user ? (
+          <>
+            <span>{user.email}</span>
+            <a onClick={handleSignOut} className="btn btn-secondary">
+              Sign Out
+            </a>
+          </>
+        ) : (
+          <button className=" btn btn-primary">
+            {" "}
+            <Link to="/login">Login</Link>
+          </button>
+        )} */}
+
+          {/* AGER PART */}
+      {/* <NavLink to="/login" className="btn btn-primary font-bold">
+          Sign In
+        </NavLink> */}
+
+        {/* <button className="btn btn-primary font-bold">Signin</button> */}
+        {/* AGER PART  */}
       </div>
     </div>
   );
