@@ -1,6 +1,14 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
-import React, { createContext, useEffect, useState } from 'react';
-import auth from '../../firebase/firebase.config';
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile
+} from "firebase/auth";
+import React, { createContext, useEffect, useState } from "react";
+import auth from "../../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
@@ -12,14 +20,13 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log('Auth State Changed:', currentUser);
+    //   console.log("Auth State Changed:", currentUser);
       setUser(currentUser);
       setLoading(false);
     });
 
-
     return () => unSubscribe();
-  }, []); 
+  }, []);
 
   // Function to create a new user
   const createUser = (email, password) => {
@@ -40,9 +47,10 @@ const AuthProvider = ({ children }) => {
 
   // Function to update user profile
   const updateUserProfile = (newProfile) => {
-    if (!auth.currentUser) return Promise.reject('No user is signed in');
-    return updateProfile(auth.currentUser, newProfile)
-      .then(() => setUser({ ...auth.currentUser })); // Refresh user context
+    if (!auth.currentUser) return Promise.reject("No user is signed in");
+    return updateProfile(auth.currentUser, newProfile).then(() =>
+      setUser({ ...auth.currentUser })
+    ); // Refresh user context
   };
 
   // Function to sign out
@@ -59,12 +67,12 @@ const AuthProvider = ({ children }) => {
     signInUser,
     signOutUser,
     signInWithGoogle,
-    updateUserProfile,
+    updateUserProfile
   };
 
-  return <AuthContext.Provider 
-  value={authInfo}>{children}
-  </AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;

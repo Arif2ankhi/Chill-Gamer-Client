@@ -40,6 +40,22 @@ const Home = () => {
         </Marquee>
       </section>
 
+
+
+      {/* top rated games 6  */}
+
+      <div className="m-20">
+        {/* Top Rated Games Section */}
+        <h1 className="text-6xl text-center justify-center text-purple-700 font-bold mb-6">
+          Top Rated Games
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {topRatedGames.map((game) => (
+            <GameCard key={game._id} game={game} />
+          ))}
+        </div>
+      </div>
+
       {/* All Games  */}
 
       <div className="m-20 ">
@@ -56,14 +72,14 @@ const Home = () => {
 
       <div className="m-20">
         {/* Top Rated Games Section */}
-        <h1 className="text-6xl text-center justify-center text-purple-700 font-bold mb-6">
+        {/* <h1 className="text-6xl text-center justify-center text-purple-700 font-bold mb-6">
           Top Rated Games
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {topRatedGames.map((game) => (
             <GameCard key={game._id} game={game} />
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div className="m-20">
