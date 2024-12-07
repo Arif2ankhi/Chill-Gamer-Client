@@ -68,19 +68,6 @@ const handleGoogleSignIn = () => {
       });
   };
 
-//   edited end 
-
-//   asol part 
-
-//   const handleGoogleSignIn = () => {
-//     signInWithGoogle()
-//       .then((result) => {
-//         console.log(result.user);
-//         navigate("/");
-//       })
-//       .catch((error) => console.log("ERROR", error.message));
-//   };
-//  asol paprt 
 
   return (
     <div className="card bg-cyan-200 w-full mx-auto max-w-sm shrink-0 shadow-2xl">

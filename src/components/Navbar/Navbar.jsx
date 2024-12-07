@@ -2,21 +2,25 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/Logo.jpg';
 import { AuthContext } from '../AuthProvider/AuthProvider';
-
+import { toast } from 'react-toastify'; // Importing toast for showing messages
 
 const Navbar = () => {
-
   const { user, signOutUser } = useContext(AuthContext);
-  // console.log(user);
+
+  // Handle SignOut
   const handleSignOut = () => {
     signOutUser()
       .then(() => {
-        console.log("user sign out successfully");
+        console.log('User signed out successfully');
+        toast.success('Logged out successfully!'); // Show a toast message
       })
-      .catch((error) => console.log("ERROR", error.message));
+      .catch((error) => {
+        console.log('Error during sign out:', error.message);
+        toast.error('Error while logging out!');
+      });
   };
 
-
+  // Links for navigation
   const links = (
     <ul className="flex flex-col lg:flex-row lg:items-center lg:gap-5">
       <li>
@@ -97,71 +101,51 @@ const Navbar = () => {
         <img
           className="w-[96px] h-[84px] text-2xl rounded-lg ml-4 animate__animated animate__flip animate__fast animate__infinite"
           src={Logo}
-          alt=""
+          alt="Logo"
         />
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="menu menu-horizontal px-1">{links}</div>
       </div>
       <div className="navbar-end">
-        {/* CHANGED PART START */}
+        {/* User Avatar and Logout */}
         {user ? (
-  <>
-    <div className="flex items-center gap-2">
-      {user.photoURL ? (
-        <img
-          src={user.photoURL}
-          alt="User Profile"
-          className="w-10 h-10 rounded-full"
-        />
-      ) : (
-        <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">
-          {user.displayName?.charAt(0).toUpperCase() || "U"}
-        </div>
-      )}
-      <span className="text-white font-bold">{user.email}</span>
-    </div>
-    <button onClick={handleSignOut} className="btn btn-secondary ml-2">
-      Sign Out
-    </button>
-  </>
-) : (
-  <button className="btn btn-primary">
-    <Link to="/login">Login</Link>
-  </button>
-)}
-
-
-
-
-        {/* CHANGED PART END */}
-        {/* PORER COMMENT  */}
-      {/* {user ? (
-          <>
-            <span>{user.email}</span>
-            <a onClick={handleSignOut} className="btn btn-secondary">
+          <div className="flex items-center gap-2">
+            {/* User Avatar */}
+            <div className="relative">
+              <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'User'}>
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt="User Profile"
+                    className="w-10 h-10 rounded-full cursor-pointer"
+                  />
+                ) : (
+                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">
+                    {user.displayName?.charAt(0).toUpperCase() || 'U'}
+                  </div>
+                )}
+              </div>
+            </div>
+            {/* Sign Out Button */}
+            <button
+              onClick={handleSignOut}
+              className="btn btn-secondary ml-2"
+            >
               Sign Out
-            </a>
-          </>
+            </button>
+          </div>
         ) : (
-          <button className=" btn btn-primary">
-            {" "}
+          <button className="btn btn-primary">
             <Link to="/login">Login</Link>
           </button>
-        )} */}
-
-          {/* AGER PART */}
-      {/* <NavLink to="/login" className="btn btn-primary font-bold">
-          Sign In
-        </NavLink> */}
-
-        {/* <button className="btn btn-primary font-bold">Signin</button> */}
-        {/* AGER PART  */}
+        )}
       </div>
     </div>
   );
 };
 
 export default Navbar;
+
 
 
