@@ -40,7 +40,7 @@ const GameCard = ({ game }) => {
   };
 
   return (
-    <div className="w-[460px] h-[720px] bg-base-100 rounded-xl shadow-md overflow-hidden">
+    <div className="w-[450px] h-[520px] bg-base-100 rounded-xl shadow-md overflow-hidden">
       <figure className="w-full h-[60%]">
         <img
           className="w-full h-full object-cover"
@@ -58,7 +58,7 @@ const GameCard = ({ game }) => {
           </span>
         </div>
         <p className="text-lg font-bold text-green-900">Released: {year}</p>
-        <div className="mt-4 flex justify-between">
+        {/* <div className="mt-4 flex justify-between">
           <button className="btn bg-slate-800 text-white">
             <FaEye />
           </button>
@@ -73,7 +73,7 @@ const GameCard = ({ game }) => {
           >
             X
           </button>
-        </div>
+        </div> */}
         <div className="mt-4">
           <button
             className="btn btn-primary w-full font-bold"
