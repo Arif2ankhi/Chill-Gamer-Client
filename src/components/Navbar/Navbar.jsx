@@ -36,6 +36,7 @@ const Navbar = () => {
         <NavLink
           className="text-lg text-black font-bold p-2"
           to="/allReviews"
+          
           activeClassName="text-orange-700"
         >
           All Reviews

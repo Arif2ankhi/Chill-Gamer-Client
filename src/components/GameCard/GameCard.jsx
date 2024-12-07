@@ -3,8 +3,7 @@
 
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaEye } from "react-icons/fa";
-import { MdEdit } from "react-icons/md";
+
 
 const GameCard = ({ game }) => {
   const navigate = useNavigate();
@@ -40,7 +39,7 @@ const GameCard = ({ game }) => {
   };
 
   return (
-    <div className="w-[450px] h-[520px] bg-base-100 rounded-xl shadow-md overflow-hidden">
+    <div className="w-[340px] h-[500px] mr-40 md:w-[320px] md:h-[520px] lg:w-[450px] lg:h-[520px] bg-base-100 rounded-2xl shadow-md  ">
       <figure className="w-full h-[60%]">
         <img
           className="w-full h-full object-cover"
@@ -58,22 +57,6 @@ const GameCard = ({ game }) => {
           </span>
         </div>
         <p className="text-lg font-bold text-green-900">Released: {year}</p>
-        {/* <div className="mt-4 flex justify-between">
-          <button className="btn bg-slate-800 text-white">
-            <FaEye />
-          </button>
-          <Link to={`updateGame/${_id}`}>
-            <button className="btn bg-green-800 text-white">
-              <MdEdit />
-            </button>
-          </Link>
-          <button
-            className="btn bg-red-500 text-white"
-            onClick={() => handleDelete(_id)}
-          >
-            X
-          </button>
-        </div> */}
         <div className="mt-4">
           <button
             className="btn btn-primary w-full font-bold"

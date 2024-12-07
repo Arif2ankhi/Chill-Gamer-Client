@@ -50,12 +50,15 @@ const AllReviews = () => {
               className="h-48 w-full object-cover"
             />
             <div className="p-4">
-              <h2 className="text-2xl font-bold mb-2">{review.gameTitle}</h2>
+              <h2 className="text-2xl font-extrabold text-purple-950 mb-2">{review.gameTitle}</h2>
               <p className="text-gray-600 mb-2">
-                <span className="font-bold">Genre:</span> {review.genre}
+                <span className="font-bold text-pink-900">Genre:</span> {review.genre}
               </p>
               <p className="text-gray-600 mb-2">
-                <span className="font-bold">Rating:</span> {review.rating} / 5
+                <span className="font-bold text-yellow-500">Rating:</span> {review.rating} / 5
+              </p>
+              <p className="text-gray-600 mb-2">
+                <span className="font-bold">Review:</span> {review.reviewDescription}
               </p>
 
               {/* Display Reviewer Info only if User is Logged In */}

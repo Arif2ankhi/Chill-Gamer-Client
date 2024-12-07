@@ -22,6 +22,7 @@ import GameCard from './components/GameCard/GameCard.jsx';
 import GameDetails from './components/GameDetails/GameDetails.jsx';
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx';
 import ReviewDetail from './components/ReviewDetail/ReviewDetail.jsx';
+import UpdateReview from './components/UpdateReview/UpdateReview.jsx';
 
 
 
@@ -54,6 +55,7 @@ const router= createBrowserRouter([
         path: "/review/:id",
         element:<ReviewDetail></ReviewDetail>,
         loader: () => fetch('http://localhost:5000/reviews')
+        // loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params._id}`),
         
 
       },
@@ -85,6 +87,11 @@ const router= createBrowserRouter([
       {
         path: "/gameCard",
         element:<GameCard></GameCard>
+      },
+      {
+        path: "/updateReview/:id",
+        element:<UpdateReview></UpdateReview>
+        
       }
       
 
