@@ -23,6 +23,7 @@ import GameDetails from './components/GameDetails/GameDetails.jsx';
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx';
 import ReviewDetail from './components/ReviewDetail/ReviewDetail.jsx';
 import UpdateReview from './components/UpdateReview/UpdateReview.jsx';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 
 
 
@@ -60,16 +61,16 @@ const router= createBrowserRouter([
       },
       {
         path:"/addReview",
-        element: <AddReview></AddReview>
+        element: <PrivateRoute><AddReview></AddReview></PrivateRoute>
 
       },
       {
         path:"/myReviews",
-        element:<MyReviews></MyReviews>
+        element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
       },
       {
         path: "/gameWatchList",
-        element: <GameWatchList></GameWatchList>
+        element: <PrivateRoute><GameWatchList></GameWatchList></PrivateRoute>
       },
       {
         path: "/login",

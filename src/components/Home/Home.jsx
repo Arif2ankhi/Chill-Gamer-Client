@@ -64,7 +64,7 @@ const Home = () => {
 
       {/* Top Rated Games */}
       <div className="m-10">
-        <h1 className="text-6xl text-center justify-center text-purple-700 font-bold mb-6">
+        <h1 className="text-4xl text-center justify-center text-green-700 font-bold mb-6">
           Top Rated Games
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 md:space-x-4 lg:grid-cols-3 gap-8">
@@ -76,7 +76,7 @@ const Home = () => {
 
       {/* All Cool Games */}
       <div className="m-10">
-        <h1 className="text-6xl text-center justify-center font-extrabold text-orange-700 mb-6">
+        <h1 className="text-4xl text-center justify-center font-extrabold text-orange-700 mb-6">
           All Cool Games
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,7 +88,7 @@ const Home = () => {
 
       {/* Action Games */}
       <div className="m-10">
-        <h1 className="text-6xl text-center justify-center font-bold text-red-700 mb-6">
+        <h1 className="text-4xl text-center justify-center font-bold text-red-700 mb-6">
           Action Games
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

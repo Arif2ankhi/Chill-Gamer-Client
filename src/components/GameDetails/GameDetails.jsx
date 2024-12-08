@@ -67,6 +67,7 @@ const GameDetails = () => {
             Rating: {renderRatingStars(rating)}
           </p>
         </div>
+        
       </div>
     </div>
   );

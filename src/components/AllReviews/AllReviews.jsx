@@ -120,7 +120,7 @@ const AllReviews = () => {
               href={`/review/${review._id}`}
               className="block mt-4 text-blue-600 font-bold"
             >
-             <button className="btn btn-secondary">Explore Details</button>
+             <button className="btn btn-secondary bg-orange-600">Explore Details</button>
             </a>
           </div>
         ))}

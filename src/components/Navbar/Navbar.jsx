@@ -100,7 +100,7 @@ const Navbar = () => {
           </ul>
         </div>
         <img
-          className="w-[96px] h-[84px] text-2xl rounded-lg ml-4 animate__animated animate__flip animate__fast animate__infinite"
+          className="w-[96px] h-[84px] text-2xl rounded-lg ml-4 animate__animated animate__flip animate__slow"
           src={Logo}
           alt="Logo"
         />
