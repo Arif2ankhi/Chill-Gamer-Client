@@ -112,7 +112,7 @@ const handleGoogleSignIn = () => {
               </button>
               <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-primary  text-2xl font-bold mt-4"
+                className="btn btn-primary  text-md md:text-lg  font-bold mt-4"
               >
                  <FcGoogle /> Signin With Google
               </button>
