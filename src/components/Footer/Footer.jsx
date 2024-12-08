@@ -1,60 +1,85 @@
-import React from "react";
-import footer from "../../assets/footer.jpeg";
+
+import React from 'react';
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className="bg-black  w-full mt-[200px]">
-      <div className="pt-20 flex flex-col items-center justify-center text-center animate__animated animate__flip animate__slow__animate_infinite">
-        <img src={footer} alt="" className="" />
-      </div>
-      <div className="ml-10 mt-8 pb-6 flex justify-between mr-10 items-center">
-        <div>
-          <h3 className="text-white font-semibold text-xl">About Us</h3>
-          <p className="text-white opacity-[50%] text-base">
-            We are a passionate team <br /> dedicated to providing the best
-            <br /> services to our customers. we offering <br /> the latest and 
-            popular collection og games
+    <footer className="bg-orange-100 text-white py-12">
+      <div className="container mx-auto px-6 lg:px-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="flex flex-col items-start">
+            <h3 className="text-black text-2xl font-semibold mb-4">Contact Us</h3>
+            <p className="text-black">Any Questions</p>
+            <ul className="mt-4 text-black">
+              <li>Email: Discount.coupon@com</li>
+              <li>Phone: +448323421</li>
+              <li>Address: East london, Uk</li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-start">
+            <h3 className="text-2xl font-semibold mb-4 text-red-950">Subscribe us</h3>
+            <form className="mt-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="mt-2 w-full bg-[#e4edd5] text-black py-2 rounded-md hover:bg-slate-500 hover:text-white transition duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          <div className="flex justify-center sm:justify-start items-center space-x-6 mt-4 sm:mt-0">
+          <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-900 hover:text-red-600 transition duration-200"
+            >
+              <FaYoutube className="text-2xl" />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-600 transition duration-200"
+            >
+              <FaFacebookF className="text-2xl" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-pink-600 transition duration-200"
+            >
+              <FaInstagram className="text-2xl" />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-400 transition duration-200"
+            >
+              <FaTwitter className="text-2xl" />
+            </a>
+          </div>
+        </div>
+        <div className="text-center mt-08">
+          <p className="text-black font-semibold mt-6">
+             @Copyright Chill Gamer. All Rights Reserved.
           </p>
         </div>
-        <div>
-          <h3 className="text-white font-semibold text-xl">Quick Links</h3>
-          <ul className="grid grid-cols-1 text-white opacity-[50%] text-base">
-            <li>Home</li>
-            <li>Service</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-
-          
-
-
-        <div>
-          <h3 className="text-white font-semibold text-xl">Subscribe</h3>
-          <p className=" text-white opacity-[50%] text-base">
-            Subscribe to our newsletter for the <br /> latest updates.
-          </p>
-          <form className="flex justify-center items-center gap-4 mt-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full max-w-xs p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-gradient-to-r from-yellow-300 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition">
-              Subscribe
-            </button>
-          </form>
-        </div>
       </div>
-      <div className="">
-        <hr />
-
-        <p className="text-center text-white font-semibold  p-8">
-          @2024 Your Company All Rights Reserved
-        </p>
-      </div>
-    </div>
+    </footer>
   );
 };
 
 export default Footer;
+
+// export default Footer;
+// export default Footer;

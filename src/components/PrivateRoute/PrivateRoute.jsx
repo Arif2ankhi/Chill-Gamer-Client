@@ -6,10 +6,6 @@ import { AuthContext } from '../../components/AuthProvider/AuthProvider';
 const PrivateRoute = ({children}) => {
     const {user, loading, isLoggedIn} = useContext(AuthContext)
 
-   
-        // const isLoggedIn = localStorage.getItem("authToken"); // Example: Use token to check if the user is logged in
-        // return isLoggedIn ? children : <Navigate to="/login" />;
-  
     
 
     if(loading){

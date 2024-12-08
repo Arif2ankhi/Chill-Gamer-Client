@@ -8,7 +8,7 @@ import 'animate.css';
 
 const Layout = () => {
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-10/12 mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
