@@ -65,7 +65,7 @@ const AddReview = () => {
   };
 
   return (
-    <div className="card bg-cyan-200 w-full mx-auto max-w-lg shrink-0 shadow-2xl">
+    <div className="card bg-cyan-600 w-full mx-auto max-w-lg shrink-0 shadow-2xl">
       <div className="hero-content flex-col">
         <h1 className="text-5xl font-bold text-cyan-800 text-center">
           Add Review

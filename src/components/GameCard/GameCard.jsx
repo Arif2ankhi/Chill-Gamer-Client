@@ -39,10 +39,11 @@ const GameCard = ({ game }) => {
   };
 
   return (
-    <div className="w-[340px] h-[500px] mr-40 md:w-[320px] md:h-[520px] lg:w-[450px] lg:h-[520px] bg-base-100 rounded-2xl shadow-md  ">
+    <div className=" w-11/12 mx-auto sm:w-[340px] h-[500px] mr-10 md:w-[260px] md:h-[540px] lg:w-[450px] lg:h-[520px] bg-base-100 rounded-2xl shadow-md mb-4 ">
       <figure className="w-full h-[60%]">
         <img
-          className="w-full h-full object-cover"
+          // className="w-full h-full object-cover"
+          className="w-96 h-80 rounded-2xl object-cover"
           src={photo}
           alt="Game Thumbnail"
         />

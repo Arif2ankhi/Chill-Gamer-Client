@@ -48,7 +48,8 @@ const GameDetails = () => {
       <figure>
         <div>
           <img
-            className="mx-auto w-96 h-72 rounded-2xl justify-items-start"
+            // className="mx-auto w-96 h-72 rounded-2xl justify-items-start"
+            className="mx-auto w-80 h-64 rounded-2xl justify-items-start"
             src={photo}
             alt=""
           />
@@ -67,7 +68,7 @@ const GameDetails = () => {
             Rating: {renderRatingStars(rating)}
           </p>
         </div>
-        
+
       </div>
     </div>
   );

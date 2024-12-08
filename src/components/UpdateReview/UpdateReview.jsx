@@ -43,10 +43,10 @@ const UpdateReview = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Update Review</h1>
+      <h1 className="text-3xl font-bold text-blue-800 text-center mb-6">Update Review</h1>
       <form
         onSubmit={handleUpdate}
-        className="max-w-xl mx-auto bg-white p-6 shadow-lg rounded-lg"
+        className="max-w-xl mx-auto bg-orange-950 p-6 shadow-lg rounded-lg"
       >
         <div className="mb-4">
           <label htmlFor="gameTitle" className="block font-bold mb-2">

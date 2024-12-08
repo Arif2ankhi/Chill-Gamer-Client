@@ -32,7 +32,13 @@ Client Link : https://github.com/programming-hero-web-course2/b10-a10-client-sid
 
 
 
-## Project live link:
+## Project live link: https://chill-gamer-video-gaming-app.netlify.app/
+
+# Client site: https://chill-gamer-video-gaming-app.netlify.app/
+
+# Server site: https://chill-gamer-server-xi.vercel.app/
+
+
 
 
 ## Thank You 
