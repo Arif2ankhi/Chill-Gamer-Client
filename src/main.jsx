@@ -41,7 +41,6 @@ const router= createBrowserRouter([
         
           path: "/games/:_id",
           element: <GameDetails></GameDetails>,
-          // loader: ({ params }) => fetch(`http://localhost:5000/game/${params._id}`),
           loader: () => fetch('http://localhost:5000/game')
          
       },
@@ -52,10 +51,10 @@ const router= createBrowserRouter([
 
       },
       {
-        path: "/review/:id",
+        path: "/review/:_id",
         element:<ReviewDetail></ReviewDetail>,
         loader: () => fetch('http://localhost:5000/reviews')
-        // loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params._id}`),
+        
         
 
       },
@@ -90,9 +89,11 @@ const router= createBrowserRouter([
       },
       {
         path: "/updateReview/:id",
-        element:<UpdateReview></UpdateReview>
-        
+        element: <UpdateReview></UpdateReview>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/reviews/${params.id}`),
       }
+      
       
 
     ]

@@ -1,11 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+
+
+
+import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const ReviewDetail = () => {
-  const review = useLoaderData(); // Data fetched from the loader in the route
+  const review = useLoaderData(); // Review data from the loader
   const { user } = useContext(AuthContext); // Current logged-in user
   const [isAddedToWatchList, setIsAddedToWatchList] = useState(false);
 
@@ -19,7 +21,6 @@ const ReviewDetail = () => {
     reviewerEmail,
   } = review;
 
-  // Handler for adding the review to the WatchList
   const handleAddToWatchList = () => {
     if (!user) {
       toast.error("You need to be logged in to add to WatchList!");
@@ -95,4 +96,5 @@ const ReviewDetail = () => {
 };
 
 export default ReviewDetail;
+
 
