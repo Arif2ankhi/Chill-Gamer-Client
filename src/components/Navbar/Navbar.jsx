@@ -69,6 +69,15 @@ const Navbar = () => {
           Watch List
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          className="text-lg text-black font-bold p-2"
+          to="/updateReview"
+          activeClassName="text-orange-700"
+        >
+          Update Review
+        </NavLink>
+      </li>
     </ul>
   );
 
