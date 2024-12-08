@@ -20,7 +20,7 @@ const AddGame = () => {
 
         // send data to server 
 
-        fetch('http://localhost:5000/game', {
+        fetch('https://chill-gamer-server-xi.vercel.app/game', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

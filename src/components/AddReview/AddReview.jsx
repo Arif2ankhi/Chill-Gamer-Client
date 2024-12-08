@@ -42,7 +42,7 @@ const AddReview = () => {
     };
 
     // Send review to backend API
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://chill-gamer-server-xi.vercel.app/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -104,7 +104,6 @@ const AddReview = () => {
 
           {/* Review Description */}
           <div className="form-control">
-            
             <label className="label">
               <span className="label-text font-bold">Review Description</span>
             </label>

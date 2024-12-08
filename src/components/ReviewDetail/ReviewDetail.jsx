@@ -37,7 +37,7 @@ const ReviewDetail = () => {
       userName: user.displayName,
     };
 
-    fetch("http://localhost:5000/watchlist", {
+    fetch("https://chill-gamer-server-xi.vercel.app/watchlist", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(watchListItem),

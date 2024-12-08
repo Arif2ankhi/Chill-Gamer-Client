@@ -20,7 +20,7 @@ Marquee to dynamic view of brand
 
 ### 📌📌 Key Features: From chill Gamer users can choose the game they liked beside this they and provide review once they are logged in.They can see the review and other details of individual games .
 
-Selection Category: User have options to select their disarable discounted products like books, groceries, electronics consumers and cloths.User can enjoy the offer just with few click in their devices which save their time and balance. Private route will help to protect the user data and the user information or their bank /card credential will be remain safe .
+
 
 ## Assignment-10-Camellia : 
 

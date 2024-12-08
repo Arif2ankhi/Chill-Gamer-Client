@@ -88,7 +88,7 @@ const Home = () => {
 
       {/* Action Games */}
       <div className="m-10">
-        <h1 className="text-4xl text-center justify-center font-bold text-red-700 mb-6">
+        <h1 className="text-4xl text-center justify-center font-bold text-red-700 mb-10">
           Action Games
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
