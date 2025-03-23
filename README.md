@@ -30,21 +30,28 @@ Server link: https://github.com/programming-hero-web-course2/b10-a10-server-side
 
 Client Link : https://github.com/programming-hero-web-course2/b10-a10-client-side-Arif2ankhi
 
-## Public repo link 
+# Public repo link 
 
-# Client :
+## Client :
  https://github.com/Arif2ankhi/Chill-Gamer-Client
 
-# Server:
+## Server:
+https://github.com/Arif2ankhi/Chill-Gamer-Server
 
 
 
 
-## Project live link: https://chill-gamer-video-gaming-app.netlify.app/
+# Project live link:
 
-# Client site: https://chill-gamer-video-gaming-app.netlify.app/
+https://chill-gamer-video-gaming-app.netlify.app/
 
-# Server site: https://chill-gamer-server-xi.vercel.app/
+# Client site:
+
+ https://chill-gamer-video-gaming-app.netlify.app/
+
+# Server site:
+
+ https://chill-gamer-server-xi.vercel.app/
 
 
 
