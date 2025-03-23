@@ -2,7 +2,7 @@
 
 import React, { useContext, useRef, useState } from "react";
 import auth from "../../firebase/firebase.config";
-import {  signInWithEmailAndPassword,  } from "firebase/auth";
+import {signInWithEmailAndPassword, } from "firebase/auth";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -56,6 +56,7 @@ const Signin = () => {
 
 const handleGoogleSignIn = () => {
     signInWithGoogle()
+    // signInWithGoogle()
       .then((result) => {
         const user = result.user;
         console.log("Google Sign-In Success:", user);
